@@ -10,3 +10,74 @@ html{
     max-width: 1400px;
     background-color: rgb(248, 242, 242);
 }
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+column-gap: 50px;
+
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+
+.wuerfel0--farbe--gruen{
+    background-color: greenyellow;
+}
+
+.wuerfel1--farbe--blau{
+    background-color: blue;
+}
+
+.wuerfel2--farbe--gelb{
+    background-color: yellow;
+}
+
+.wuerfel3--farbe--rot{
+    background-color: red;
+}
+
+.wuerfel4--farbe--lila {
+    background-color: blueviolet;
+    transition: translateY ;
+}
+
+/* *************** Animation *********** */
+
+.box:hover .wuerfel {
+animation-name: linie;
+
+animation-duration: 6s;
+animation-iteration-count: infinite;
+animation-timing-function: ease;
+}
+
+/* ************ style Animation ******** */
+
+@keyframes linie {
+    0%{
+       transform: translateY(0px);
+    }
+
+    25%{
+        transform: translateY(-100px);
+    }
+
+    100%{
+        transform: translateY(-300px);
+    }
+}
